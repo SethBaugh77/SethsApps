@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Apps Landing Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: #0078d4;
+      color: white;
+      width: 100%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 800px;
+      padding: 2rem 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+    .app-card {
+      background: white;
+      border-radius: 45px; /* Increased from 12px to 24px for more rounded corners */
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .app-card:hover {
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .app-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .app-desc {
+      font-size: 1rem;
+      color: #555;
+    }
+    /* Add background image for Randomizer card */
+    .app-card.randomizer {
+      background-image: url('shuffler.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .app-card.cetl {
+      background-image: url('cetl.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .app-card.ar {
+      background-image: url('ARIcon.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .app-card.randomizer .app-desc {
+      color: #f0f0f0;
+    }
+    footer {
+      padding: 1rem;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Apps</h1>
+  <p>Explore my collection of apps below</p>
+</header>
+
+<main>
+  <a href="randomizer/index.html" class="app-card randomizer" aria-label="Randomizer App Page">
+    <div class="app-title"></div>
+    <div class="app-desc"></div>
+  </a>
+
+  <a href="todo/index.html" class="app-card cetl" aria-label="To-Do List App Page">
+    <div class="app-title"></div>
+    <div class="app-desc"></div>
+  </a>
+
+  <a href="weather/index.html" class="app-card ar" aria-label="Weather App Page">
+    <div class="app-title"></div>
+    <div class="app-desc"></div>
+  </a>
+
+  <a href="notes/index.html" class="app-card" aria-label="Notes App Page">
+    <div class="app-title">Notes</div>
+    <div class="app-desc">Simple and quick note-taking app.</div>
+  </a>
+</main>
+
+<footer>
+  &copy; 2025 Your Name. All rights
