@@ -45,6 +45,11 @@
       text-decoration: none;
       color: inherit;
     }
+    .app-card.notes {
+  background: none;
+  box-shadow: none;
+  cursor: default;
+}
     .app-card:hover {
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
@@ -71,7 +76,7 @@
       color: white;
     }
     .app-card.ar {
-      background-image: url('ar.png');
+      background-image: url('ARIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
@@ -79,6 +84,9 @@
     .app-card.randomizer .app-desc {
       color: #f0f0f0;
     }
+    .app-card .invisible {
+  visibility: hidden;
+}
     footer {
       padding: 1rem;
       text-align: center;
@@ -105,15 +113,15 @@
     <div class="app-desc"></div>
   </a>
 
-  <a href="weather/index.html" class="app-card ar" aria-label="Weather App Page">
-    <div class="app-title">Weather</div>
-    <div class="app-desc">Check the current weather and forecast.</div>
-  </a>
+  <a href="http://arlst.com" class="app-card ar" aria-label="Weather App Page">
+  <div class="app-title invisible">Weather</div>
+  <div class="app-desc invisible">Check the current weather and forecast.</div>
+</a>
 
-  <a href="notes/index.html" class="app-card" aria-label="Notes App Page">
-    <div class="app-title">Notes</div>
-    <div class="app-desc">Simple and quick note-taking app.</div>
-  </a>
+  <a class="app-card notes" aria-label="Notes App Page" style="pointer-events: none;">
+  <div class="app-title invisible">Notes</div>
+  <div class="app-desc invisible">Simple and quick note-taking app.</div>
+</a>
 </main>
 
 <footer>
